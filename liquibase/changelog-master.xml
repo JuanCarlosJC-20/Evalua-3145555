@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <!-- Incluir changelogs por dominio en orden de dependencia -->
+    
+    <!-- Dominio 1: Referencia / Geografía -->
+    <include file="changelogs/001-referencia.xml" relativeToChangelogFile="true"/>
+    
+    <!-- Dominio 2: Seguridad e Identidad -->
+    <include file="changelogs/002-identidad-seguridad.xml" relativeToChangelogFile="true"/>
+    
+    <!-- Dominio 3: Clientes -->
+    <include file="changelogs/003-clientes.xml" relativeToChangelogFile="true"/>
+    
+    <!-- Dominio 4: Operaciones -->
+    <include file="changelogs/004-operaciones.xml" relativeToChangelogFile="true"/>
+    
+    <!-- Dominio 5: Transaccionales -->
+    <include file="changelogs/005-transaccionales.xml" relativeToChangelogFile="true"/>
+    
+    <!-- Agregar más changelogs según necesidad -->
+
+</databaseChangeLog>
+
